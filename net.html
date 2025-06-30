@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Wedding Sarees</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #ba9ca6;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #e91e63;
+            margin: 30px 0;
+        }
+
+        .product-grid {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .product-card {
+            background-color: #fff;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .product-card:hover {
+            transform: scale(1.03);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .product-card h3 {
+            font-size: 18px;
+            margin: 10px 0 5px;
+            color: #333;
+        }
+
+        .product-card .price {
+            color: #e91e63;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+        }
+
+        .actions button {
+            padding: 6px 10px;
+            font-size: 14px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .wishlist {
+            background-color: #ffe6ec;
+            color: #e91e63;
+        }
+
+        .wishlist:hover {
+            background-color: #f8c4d6;
+        }
+
+        .add-cart {
+            background-color: #e91e63;
+            color: #fff;
+        }
+
+        .add-cart:hover {
+            background-color: #c2185b;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1 style="text-align:center; color:#e91e63; margin-top:30px;">Net Sarees</h1>
+
+    <div class="product-grid"
+        style="padding: 20px; display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+
+        <div class="product-card">
+            <img src="assets/n1.webp" alt="Net Saree 1" />
+            <h3>Golden Net Saree</h3>
+            <p class="price">₹4,999</p>
+            <div class="actions">
+                <button class="wishlist"><i class="fa-regular fa-heart"></i></button>
+                <button class="add-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="assets/n3.jpeg" alt="Net Saree 2" />
+            <h3>Heavy Zari Net Saree</h3>
+            <p class="price">₹4,499</p>
+            <div class="actions">
+                <button class="wishlist"><i class="fa-regular fa-heart"></i></button>
+                <button class="add-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="assets/n2.webp" alt="net Saree 3" />
+            <h3>Heavy Golden Net Saree</h3>
+            <p class="price">₹3,599</p>
+            <div class="actions">
+                <button class="wishlist"><i class="fa-regular fa-heart"></i></button>
+                <button class="add-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="assets/n5.webp" alt="Net Saree 3" />
+            <h3>Black Net Saree</h3>
+            <p class="price">₹5,499</p>
+            <div class="actions">
+                <button class="wishlist"><i class="fa-regular fa-heart"></i></button>
+                <button class="add-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="assets/n6.webp" alt="Net Saree 3" />
+            <h3>Net Saree</h3>
+            <p class="price">₹6,499</p>
+            <div class="actions">
+                <button class="wishlist"><i class="fa-regular fa-heart"></i></button>
+                <button class="add-cart">Add to Cart</button>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="assets/n7.jpeg" alt="Net Saree 3" />
+            <h3>Red Net Saree</h3>
+            <p class="price">₹4,799</p>
+            <div class="actions">
+                <button class="wishlist"><i class="fa-regular fa-heart"></i></button>
+                <button class="add-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <footer style="background-color: #2c2c2c; color: #fff; padding: 40px 20px 20px; font-family: 'Segoe UI', sans-serif; margin-top: 40px;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; max-width: 1200px; margin: auto;">
+
+    
+    <div style="flex: 1 1 220px;">
+      <h3 style="color: #e91e63; margin-bottom: 15px;">Net Sarees</h3>
+      <p style="font-size: 14px; color: #ccc;">Celebrate your special day with our premium collection of bridal and festive sarees. Elegance, tradition, and style in every drape.</p>
+    </div>
+
+    
+    <div style="flex: 1 1 220px;">
+      <h3 style="color: #e91e63; margin-bottom: 15px;">Quick Links</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="index.html" style="color: #ccc; text-decoration: none;">Home</a></li>
+        <li><a href="cart.html" style="color: #ccc; text-decoration: none;">Cart</a></li>
+        <li><a href="wishlist.html" style="color: #ccc; text-decoration: none;">Wishlist</a></li>
+        <li><a href="#" style="color: #ccc; text-decoration: none;">Support</a></li>
+      </ul>
+    </div>
+<div style="flex: 1 1 220px;">
+      <h3 style="color: #e91e63; margin-bottom: 15px;">Contact Us</h3>
+      <p style="font-size: 14px; color: #ccc;">Email: net@sareeshop.com</p>
+      <p style="font-size: 14px; color: #ccc;">Phone: +91 9876543210</p>
+      <p style="font-size: 14px; color: #ccc;">Address: Patna, Bihar, India</p>
+    </div>
+<div style="flex: 1 1 220px;">
+      <h3 style="color: #e91e63; margin-bottom: 15px;">Follow Us</h3>
+      <div>
+        <a href="#" style="color: #e91e63; background-color: #fff; margin-right: 10px; padding: 8px; border-radius: 50%; display: inline-block;"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" style="color: #e91e63; background-color: #fff; margin-right: 10px; padding: 8px; border-radius: 50%; display: inline-block;"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" style="color: #e91e63; background-color: #fff; margin-right: 10px; padding: 8px; border-radius: 50%; display: inline-block;"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+</div>
+ <div style="text-align: center; padding-top: 20px; font-size: 13px; color: #aaa; border-top: 1px solid #444; margin-top: 30px;">
+    <p>&copy; 2025 SareeShop - Net Collection. All Rights Reserved.</p>
+  </div>
+</footer>
+<script>
+document.querySelectorAll('.wishlist').forEach((btn, index) => {
+    btn.addEventListener('click', function () {
+        const card = btn.closest('.product-card');
+        const product = {
+            name: card.querySelector('h3').innerText,
+            price: card.querySelector('.price').innerText,
+            image: card.querySelector('img').getAttribute('src')
+        };
+
+        let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        wishlist.push(product);
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+
+        alert("Added to Wishlist!");
+    });
+});
+document.querySelectorAll('.add-cart').forEach((btn, index) => {
+    btn.addEventListener('click', function () {
+        const card = btn.closest('.product-card');
+        const product = {
+            name: card.querySelector('h3').innerText,
+            price: card.querySelector('.price').innerText,
+            image: card.querySelector('img').getAttribute('src')
+        };
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push(product);
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        alert("Added to Cart!");
+    });
+});
+
+</script>
+</body>
+</html>
