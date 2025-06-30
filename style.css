@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.navbar {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 40px;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-logo img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+.logo-tagline {
+  font-size: 14px;
+  font-weight: bold;
+  color: #e91e63;
+  margin-top: 4px;
+}
+
+.nav-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-search input {
+  padding: 8px 20px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 200px;
+  outline: none;
+}
+
+.nav-search button {
+  background-color: #e91e63;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.nav-search button:hover {
+  background-color: #c2185b;
+}
+
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.icon-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.icon-box i {
+  font-size: 22px;
+  color: #333;
+}
+
+.icon-box span {
+  font-size: 12px;
+  margin-top: 4px;
+  color: #555;
+}
+
+.icon-box a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.icon-box a:hover i {
+  color: #e91e63;
+}
+.hero-section {
+  padding: 60px 40px;
+  background-color: #fdf7f8;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero-image img {
+  width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.hero-text {
+  max-width: 600px;
+  padding: 20px;
+}
+
+.hero-text h1 {
+  font-size: 32px;
+  color: #e91e63;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.shop-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #e91e63;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.shop-btn:hover {
+  background-color: #c2185b;
+}
+
+
+.category-section {
+  padding: 40px 20px;
+  background-color: #fff0f5;
+  text-align: center;
+}
+
+.category-section h2 {
+  font-size: 28px;
+  color: #e91e63;
+  margin-bottom: 30px;
+}
+
+.category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.category-card {
+  width: 180px;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.category-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.category-card p {
+  padding: 10px 0;
+  font-weight: 600;
+  color: #e91e63;
+  font-size: 16px;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+}
+
+
+.footer {
+  background-color: #2c2c2c;
+  color: #fff;
+  padding: 40px 20px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-box {
+  flex: 1 1 220px;
+}
+
+.footer-box h3 {
+  color: #e91e63;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.footer-box p, .footer-box li, .footer-box a {
+  font-size: 14px;
+  color: #ccc;
+  text-decoration: none;
+  line-height: 1.6;
+}
+
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-box a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.social-icons a {
+  display: inline-block;
+  color: #e91e63;
+  background-color: #fff;
+  margin-right: 10px;
+  padding: 8px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+  background-color: #e91e63;
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 13px;
+  color: #aaa;
+  border-top: 1px solid #444;
+}
+
+
+
+
+
+
