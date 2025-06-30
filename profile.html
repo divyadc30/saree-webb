@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile - Saree Shop</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fbeff3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 350px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #e91e63;
+      margin-bottom: 20px;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #e91e63;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .toggle-link {
+      color: #e91e63;
+      cursor: pointer;
+      text-decoration: underline;
+      font-size: 14px;
+    }
+
+    #profileView {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div id="loginForm">
+    <h2>Login</h2>
+    <input type="email" id="loginEmail" placeholder="Email" required>
+    <input type="password" id="loginPassword" placeholder="Password" required>
+    <button onclick="loginUser()">Login</button>
+    <p>Don't have an account? <span class="toggle-link" onclick="toggleForms('signup')">Signup</span></p>
+  </div>
+
+  
+  <div id="signupForm" style="display: none;">
+    <h2>Signup</h2>
+    <input type="text" id="signupName" placeholder="Full Name" required>
+    <input type="email" id="signupEmail" placeholder="Email" required>
+    <input type="password" id="signupPassword" placeholder="Password" required>
+    <button onclick="signupUser()">Signup</button>
+    <p>Already have an account? <span class="toggle-link" onclick="toggleForms('login')">Login</span></p>
+  </div>
+
+
+  <div id="profileView">
+    <h2>Welcome, <span id="userName"></span></h2>
+    <p>Email: <span id="userEmail"></span></p>
+    <button onclick="logoutUser()">Logout</button>
+  </div>
+</div>
+
+<script>
+  
+  function toggleForms(form) {
+    document.getElementById('loginForm').style.display = form === 'login' ? 'block' : 'none';
+    document.getElementById('signupForm').style.display = form === 'signup' ? 'block' : 'none';
+  }
+
+  function signupUser() {
+    const name = document.getElementById('signupName').value;
+    const email = document.getElementById('signupEmail').value;
+    const password = document.getElementById('signupPassword').value;
+
+    const user = { name, email, password };
+    localStorage.setItem('user', JSON.stringify(user));
+    alert("Signup successful! You can now login.");
+    toggleForms('login');
+  }
+
+
+  function loginUser() {
+    const email = document.getElementById('loginEmail').value;
+    const password = document.getElementById('loginPassword').value;
+
+    const storedUser = JSON.parse(localStorage.getItem('user'));
+    if (storedUser && storedUser.email === email && storedUser.password === password) {
+      localStorage.setItem('isLoggedIn', 'true');
+      showProfile(storedUser);
+    } else {
+      alert("Invalid credentials");
+    }
+  }
+ function showProfile(user) {
+    document.getElementById('loginForm').style.display = 'none';
+    document.getElementById('signupForm').style.display = 'none';
+    document.getElementById('profileView').style.display = 'block';
+    document.getElementById('userName').textContent = user.name;
+    document.getElementById('userEmail').textContent = user.email;
+  }
+function logoutUser() {
+    localStorage.removeItem('isLoggedIn');
+    location.reload();
+  }
+window.onload = function () {
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (isLoggedIn && user) {
+      showProfile(user);
+    }
+  }
+</script>
+</body>
+</html>
+
+
+
